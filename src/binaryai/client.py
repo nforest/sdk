@@ -561,7 +561,8 @@ class BinaryAI(object):
         for item in func.match:
             matched_func = MatchedFunction(
                 score=item.score,
-                code=(None if not item.function else item.function.code),
+                algorithm=item.algorithm,
+                code=(None if not item.function else item.function.code)
             )
             matched_func_list.append(matched_func)
         return matched_func_list

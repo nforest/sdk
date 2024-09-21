@@ -113,7 +113,7 @@ class QCloudHttpxAuth(httpx.Auth):
         # Create a date for headers and the credential string
         t = datetime.datetime.now()
         amzdate = str(int(t.timestamp()))
-        datestamp = t.utcfromtimestamp(t.timestamp()).strftime("%Y-%m-%d")  # Date w/o time for credential_scope
+        datestamp = datetime.datetime.fromtimestamp(t.timestamp(), tz=datetime.timezone.utc).strftime("%Y-%m-%d")  # Date w/o time for credential_scope
 
         canonical_uri = QCloudHttpxAuth.get_canonical_path(r)
 

@@ -419,11 +419,12 @@ class Client(BaseClient):
               file: fileByHash(input: {sha256: $sha256}) {
                 decompileResult {
                   function(offset: $offset) {
-                    match(topK: 10) {
+                    match(topK: 1) {
                       score
                       function {
                         code
                       }
+                      algorithm
                     }
                   }
                 }

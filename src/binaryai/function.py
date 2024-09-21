@@ -21,7 +21,8 @@ class MatchedFunction(object):
     Note that this class is experiment and maybe changed in the future.
     """
 
-    def __init__(self, score: float, code: str) -> None:
+    def __init__(self, score: float, code: str, algorithm: str) -> None:
         super().__init__()
         self.score = score
         self.code = code
+        self.algorithm = algorithm

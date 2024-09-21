@@ -28,6 +28,7 @@ class FunctionMatchFileDecompileResultFunction(BaseModel):
 
 class FunctionMatchFileDecompileResultFunctionMatch(BaseModel):
     score: float
+    algorithm: str
     function: "FunctionMatchFileDecompileResultFunctionMatchFunction"
 
 
